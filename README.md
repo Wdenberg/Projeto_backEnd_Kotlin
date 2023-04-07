@@ -52,3 +52,9 @@ click here</a>
 <div>
 <img src="https://user-images.githubusercontent.com/88355939/230685354-d5b60efe-62b1-411c-8b4a-a661d9b0e50f.png">
 </div>
+
+# CONTRATO JSON
+
+<div>
+<img src="https://user-images.githubusercontent.com/113148727/230689299-b380c964-0295-4b1f-8286-27f1cc674711.png">
+</div>
