@@ -37,9 +37,9 @@ width="700px"/>
 width="700px"/>
 </div>
 
-
-<a style="font-size= 20px, text-decoration-line= none" href= "https://www.figma.com/file/6M8Pq62vm6QYPqTsYJBCmf/Ui---B7Delivery?node-id=403-14&t=oVCsS6KFDeuCEaFc-0"> 
-Link do Figma</a>
+# LINK DO FIGMA
+<a href= "https://www.figma.com/file/6M8Pq62vm6QYPqTsYJBCmf/Ui---B7Delivery?node-id=403-14&t=oVCsS6KFDeuCEaFc-0"> 
+click here</a>
 
 # TELA DE LOGIN
 
