@@ -23,7 +23,3 @@ Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 5. Listagem dos produtos.
 6. Realizar cadastro.
 
-# Requisitos suplementares
-1.	Recuperação de senha.
-2.	Registrar e aplicar promoções de produtos.
-3.	Registrar e autorizar pagamentos com cartão de crédito, débito e à vista.
