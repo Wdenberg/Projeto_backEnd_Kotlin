@@ -37,14 +37,17 @@ width="700px"/>
 width="700px"/>
 </div>
 
+<a href= "https://www.figma.com/file/6M8Pq62vm6QYPqTsYJBCmf/Ui---B7Delivery?node-id=403-14&t=oVCsS6KFDeuCEaFc-0"> 
+Link do Figma</a>
+
 # TELA DE LOGIN
 
 <div>
-<img src="https://user-images.githubusercontent.com/88355939/230685298-2cae573d-c681-4019-9655-ee8a76df6c65.png"
+<img src="https://user-images.githubusercontent.com/88355939/230685298-2cae573d-c681-4019-9655-ee8a76df6c65.png">
 </div>
 
 # TELA DE CARDAPIO
 
 <div>
-<img src="https://user-images.githubusercontent.com/88355939/230685354-d5b60efe-62b1-411c-8b4a-a661d9b0e50f.png"
+<img src="https://user-images.githubusercontent.com/88355939/230685354-d5b60efe-62b1-411c-8b4a-a661d9b0e50f.png">
 </div>
