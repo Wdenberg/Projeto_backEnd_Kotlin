@@ -23,3 +23,16 @@ Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 5. Listagem dos produtos.
 6. Realizar cadastro.
 
+# UML do Mobile
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/88355939/230667826-f4cd8581-431a-4c5a-9ac7-80a43a5389a8.jpeg" 
+width="700px"/>
+</div>
+
+# UML do BackEnd
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/88355939/230667728-da6492c6-1418-4266-b39d-3ce3fc6142f1.jpeg" 
+width="700px"/>
+</div>
