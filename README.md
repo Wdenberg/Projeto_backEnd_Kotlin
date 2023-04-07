@@ -36,3 +36,15 @@ width="700px"/>
 <img src="https://user-images.githubusercontent.com/88355939/230667728-da6492c6-1418-4266-b39d-3ce3fc6142f1.jpeg" 
 width="700px"/>
 </div>
+
+# TELA DE LOGIN
+
+<div>
+<img src="https://user-images.githubusercontent.com/88355939/230685298-2cae573d-c681-4019-9655-ee8a76df6c65.png"
+</div>
+
+# TELA DE CARDAPIO
+
+<div>
+<img src="https://user-images.githubusercontent.com/88355939/230685354-d5b60efe-62b1-411c-8b4a-a661d9b0e50f.png"
+</div>
