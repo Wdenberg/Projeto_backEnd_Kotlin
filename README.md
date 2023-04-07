@@ -1,4 +1,4 @@
-Projeto Back-End -- Kotlin --- Faculdade Joaquim Nabuco
+Projeto Back-End -- Kotlin --- UNINASSAU
 
 
 # Wdenberg Ramos - MT: 01559841
