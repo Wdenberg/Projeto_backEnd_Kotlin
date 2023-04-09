@@ -68,10 +68,13 @@ password: senha do usuário existente e referente ao e-mail
 Ok! 200 
 
 Exemplo de resposta:
-
+```
 { 
+
   token: “153584135@48748$4828%5486”  
+
 } 
+```
 ### Get / Users
 Esse endpoint é responsável por retornar todos os usuários que têm no sistema
 
@@ -83,6 +86,7 @@ name: name do usuário para procurar ele no banco de dados.
 
 Exemplo de resposta:
 
+```
 [ 
   { 
     Id: 1, 
@@ -95,6 +99,7 @@ Exemplo de resposta:
     email: ”lucas779@gmail.com”, 
   } 
 ] 
+```
 ### Get / User
 Esse endpoint é responsável por retornar os dados do usuário a partir do id.
 
@@ -106,12 +111,14 @@ id: id do usuário para procurar ele no banco de dados.
 
 Exemplo de resposta:
 
+```
 { 
     Id: 1, 
     name: “felipe da silva filho”, 
     email: ”felipe48@gmail.com”,
  
 } 
+```
 
 ### Get / Produtos
 Esse endpoint é responsável por retornar todos os Produtos que têm no sistema
@@ -129,21 +136,28 @@ Esse endpoint é responsável por criar um Produto no sistema.
 ### Parâmetros:
 
 Exemplo de resposta:
+
+```
   {
     name: nome do Produto
     id: indetificação do Produto
     img: imagem do Produto
     descrição: e a descrição do produto
   } 
+
+```
 ### Resposta:
 Created! 201
 
 Exemplo de resposta:
 
+```
 { 
-  response: “user successfully saved” 
-} 
 
+  response: “user successfully saved” 
+
+} 
+```
 
 ### Put/ User
 Esse endpoint é responsável por atualizar os dados do usuário no sistema de banco de dados.
@@ -161,13 +175,15 @@ Esse endpoint é responsável por atualizar os dados do Produto no sistema de ba
 Parâmetros:
 
 Exemplo de resposta:
+
+```
 {
   Id: identificado do Produto a ser atualizado.
   name: nome do Produto.
   img: imagem do Produto
   descrição: e a descrição do Produto
 }
-
+```
 
 ### Resposta:
 No content! 204
@@ -179,38 +195,45 @@ Esse endpoint é responsável por deletar um user do sistema de banco de dados.
 
 Exemplo de resposta: 
 
+```
 {
   Id: para identificar o usuário que será removido.
 }
-
+```
 
 ### Resposta:
 Ok! 200
 
 Exemplo de resposta:
 
+```
 { 
   response: “Sucessfully deleted user” 
 }  
-
+```
 ### Delete / Produto
 Esse endpoint é responsável por deletar um user do sistema de banco de dados.
 
 ### Parâmetros:
-{
-  Id: para identificar o Produto que será removido.
-}
 
+```
+{
+  
+  Id: para identificar o Produto que será removido.
+
+}
+```
 
 ### Resposta:
 Ok! 200
 
 Exemplo de resposta:
 
+```
 { 
   response: “Sucessfully deleted user” 
 } 
-
+```
 ### Get / Location/:id
 Esse endpoint é responsável retorna os dados da localização do Usuario com base no ID fornecido.
 
@@ -222,6 +245,7 @@ Ok! 200
 
 Exemplo de resposta:
 
+```
 { 
 
   Id: 1, 
@@ -230,6 +254,7 @@ Exemplo de resposta:
   country: “Brasil”, 
   user_id: 1 
 } 
+```
 
 ### Post/ Location
 Esse endpoint é responsável por enviar os dados da localização do Ususario para poder salvar no banco de dados.
@@ -240,9 +265,11 @@ Ok! 200
 
 Exemplo de resposta:
 
+```
 { 
   response: “data update successsfully” 
 } 
+```
 
 ### Put / Location/:id
 Esse endpoint por atualizar os da localização do Endereço de acordo com o ID informado.
@@ -255,9 +282,12 @@ Ok! 200
 
 Exemplo de resposta:
 
+```
 {
   "successful user update"
 }
+```
+
 ### Delete / Location/:id
 Esse endpoint por deletar a localização  com o id fornecido. 
 ### Parâmetros:
@@ -267,7 +297,8 @@ Id: para indicar a localização que o usuário deseja deletar.
 Ok! 200
 
 Exemplo de resposta:
-
+```
 { 
   response:  ”successsfully deleted location” 
 }  
+```
