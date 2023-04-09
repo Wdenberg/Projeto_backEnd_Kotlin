@@ -54,31 +54,31 @@ click here</a>
 </div>
 
 
-#Api / Contrato JSON
-#EndPoints
-#EndPoint User
-#Post/ Authentication
 
-#Esse endpoint é responsável por autenticação do usuário.
 
-Parâmetros:
-email: Email do usuário existente. password: senha do usuário existente e referente ao e-mail
-
-Respostas:
-Ok! 200
+# Api / Contrato JSON 
+## EndPoints 
+## EndPoint User
+### Post/ Authentication 
+Esse endpoint é responsável por autenticação do usuário. 
+#### Parâmetros: 
+email: Email do usuário existente. 
+password: senha do usuário existente e referente ao e-mail  
+#### Respostas: 
+Ok! 200 
 
 Exemplo de resposta:
 
 { 
   token: “153584135@48748$4828%5486”  
 } 
-Get / Users
+### Get / Users
 Esse endpoint é responsável por retornar todos os usuários que têm no sistema
 
-Parâmetros:
+### Parâmetros:
 name: name do usuário para procurar ele no banco de dados.
 
-Resposta:
+### Resposta:
 200! Ok
 
 Exemplo de resposta:
@@ -95,13 +95,13 @@ Exemplo de resposta:
     email: ”lucas779@gmail.com”, 
   } 
 ] 
-Get / User
+### Get / User
 Esse endpoint é responsável por retornar os dados do usuário a partir do id.
 
-Parâmetros:
+### Parâmetros:
 id: id do usuário para procurar ele no banco de dados.
 
-Resposta:
+### Resposta:
 200! Ok
 
 Exemplo de resposta:
@@ -113,27 +113,29 @@ Exemplo de resposta:
  
 } 
 
-Get / Produtos
+### Get / Produtos
 Esse endpoint é responsável por retornar todos os Produtos que têm no sistema
 
-Parâmetros:
+### Parâmetros:
 id: do Produto para procurar ele no banco de dados.
 name: name do Produto para procurar ele no banco de dados.
 
-Resposta:
+### Resposta:
 200! Ok
 
-Post / Produto
+### Post / Produto
 Esse endpoint é responsável por criar um Produto no sistema.
 
- #Parâmetros:{
+### Parâmetros:
+
+Exemplo de resposta:
+  {
     name: nome do Produto
     id: indetificação do Produto
     img: imagem do Produto
-    descrição: e a descrição do Produto
-
-} 
-Resposta:
+    descrição: e a descrição do produto
+  } 
+### Resposta:
 Created! 201
 
 Exemplo de resposta:
@@ -143,39 +145,46 @@ Exemplo de resposta:
 } 
 
 
-Put/ User
+### Put/ User
 Esse endpoint é responsável por atualizar os dados do usuário no sistema de banco de dados.
 
-Parâmetros:
+### Parâmetros:
 Id: identificado do usuário a ser atualizado. name: nome do usuário.
 
-Resposta:
+### Resposta:
 No content! 204
 
 
-Put/ Produto
+### Put/ Produto
 Esse endpoint é responsável por atualizar os dados do Produto no sistema de banco de dados.
 
-Parâmetros:{
-    Id: identificado do Produto a ser atualizado.
-    name: nome do Produto.
-    img: imagem do Produto
-    descrição: e a descrição do Produto
+Parâmetros:
+
+Exemplo de resposta:
+{
+  Id: identificado do Produto a ser atualizado.
+  name: nome do Produto.
+  img: imagem do Produto
+  descrição: e a descrição do Produto
 }
 
 
-Resposta:
+### Resposta:
 No content! 204
 
-Delete / User
+### Delete / User
 Esse endpoint é responsável por deletar um user do sistema de banco de dados.
 
-Parâmetros:{
-    Id: para identificar o usuário que será removido.
+### Parâmetros:
+
+Exemplo de resposta: 
+
+{
+  Id: para identificar o usuário que será removido.
 }
 
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
@@ -184,29 +193,31 @@ Exemplo de resposta:
   response: “Sucessfully deleted user” 
 }  
 
-Delete / Produto
+### Delete / Produto
 Esse endpoint é responsável por deletar um user do sistema de banco de dados.
 
-Parâmetros:{
-    Id: para identificar o Produto que será removido.
+### Parâmetros:
+{
+  Id: para identificar o Produto que será removido.
 }
 
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
 
 { 
   response: “Sucessfully deleted user” 
-}  
-Get / Location/:id
+} 
+
+### Get / Location/:id
 Esse endpoint é responsável retorna os dados da localização do Usuario com base no ID fornecido.
 
-Parâmetros:
+### Parâmetros:
 user_id: refere-se ao usuário que deseja usar essas informações de localização para si mesmo.
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
@@ -219,11 +230,12 @@ Exemplo de resposta:
   country: “Brasil”, 
   user_id: 1 
 } 
-Post/ Location
+
+### Post/ Location
 Esse endpoint é responsável por enviar os dados da localização do Ususario para poder salvar no banco de dados.
 Parâmetros:
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
@@ -231,13 +243,14 @@ Exemplo de resposta:
 { 
   response: “data update successsfully” 
 } 
-Put / Location/:id
+
+### Put / Location/:id
 Esse endpoint por atualizar os da localização do Endereço de acordo com o ID informado.
 
-Parâmetros:
+### Parâmetros:
 Id: Id da localização do endereço será atualizada. city: cidade do Usuario. state: estado do Usuario. country: país do Usuario.
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
@@ -245,12 +258,12 @@ Exemplo de resposta:
 {
   "successful user update"
 }
-Delete / Location/:id
+### Delete / Location/:id
 Esse endpoint por deletar a localização  com o id fornecido. 
-Parâmetros:
+### Parâmetros:
 Id: para indicar a localização que o usuário deseja deletar.
 
-Resposta:
+### Resposta:
 Ok! 200
 
 Exemplo de resposta:
