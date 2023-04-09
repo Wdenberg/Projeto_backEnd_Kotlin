@@ -1,62 +1,260 @@
-# Kotlin, Spring Boot, MySQL, JPA, Hibernate Rest API
+Projeto Back-End -- Kotlin --- UNINASSAU
 
-Build a Restful CRUD API using Kotlin, Spring Boot, Mysql, JPA and Hibernate.
 
-## Requirements
+# Wdenberg Ramos - MT: 01559841
+# David Jorge -- MT: 01527162
+# João Vichtor -- MT: 01528233
+# Eduardo Estevão -- MT: 01566933
 
-1. Java - 11
 
-2. Maven - 3.x.x
+Aplicação Back-End do B7Burguer - Kotlin, Spring Boot, Mysql, JPA and Hibernate
 
-3. Mysql - 5.x.x
 
-## Steps to Setup
+# LEVANTAMENTO DE REQUISITOS DA APLICAÇÃO MOBLIE E BACK-END.
 
-**1. Clone the application**
+Sistema Loja Delivery.
+Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 
-```bash
-git clone https://github.com/callicoder/kotlin-spring-boot-jpa-rest-api-demo.git
-```
+# Requisitos funcionais
+1. Registro de Usuário (Dados pessoais na aplicação).
+2. Registrar vendas do produto.
+3. Detalhamento do produto.
+4. Realizar login.
+5. Listagem dos produtos.
+6. Realizar cadastro.
 
-**2. Create Mysql database**
-```bash
-create database kotlin_demo_app
-```
+# UML do Mobile
 
-**3. Change mysql username and password as per your installation**
+<div align="center">
+<img src="https://user-images.githubusercontent.com/88355939/230667826-f4cd8581-431a-4c5a-9ac7-80a43a5389a8.jpeg" 
+width="700px"/>
+</div>
 
-+ open `src/main/resources/application.properties`
+# UML do BackEnd
 
-+ change `spring.datasource.username` and `spring.datasource.password` as per your mysql installation
+<div align="center">
+<img src="https://user-images.githubusercontent.com/88355939/230667728-da6492c6-1418-4266-b39d-3ce3fc6142f1.jpeg" 
+width="700px"/>
+</div>
 
-**4. Running the App**
+# LINK DO FIGMA
+<a href= "https://www.figma.com/file/6M8Pq62vm6QYPqTsYJBCmf/Ui---B7Delivery?node-id=403-14&t=oVCsS6KFDeuCEaFc-0"> 
+click here</a>
 
-Type the following command in your terminal to run the app -
+# TELA DE LOGIN
 
-```bash
-mvn spring-boot:run
-```
+<div>
+<img src="https://user-images.githubusercontent.com/88355939/230685298-2cae573d-c681-4019-9655-ee8a76df6c65.png">
+</div>
 
-The app will start running at <http://localhost:8080>.
+# TELA DE CARDAPIO
 
-## Explore Rest APIs
+<div>
+<img src="https://user-images.githubusercontent.com/88355939/230685354-d5b60efe-62b1-411c-8b4a-a661d9b0e50f.png">
+</div>
 
-The app defines following CRUD APIs.
 
-    GET /api/articles
-    
-    POST /api/articles
-    
-    GET /api/articles/{id}
-    
-    PUT /api/articles/{id}
-    
-    DELETE /api/articles/{id}
+#Api / Contrato JSON
+#EndPoints
+#EndPoint User
+#Post/ Authentication
 
-You can test them using postman or any other rest client.
+#Esse endpoint é responsável por autenticação do usuário.
 
-## Learn more
+Parâmetros:
+email: Email do usuário existente. password: senha do usuário existente e referente ao e-mail
 
-You can find the tutorial for this application on my blog -
+Respostas:
+Ok! 200
 
-<https://www.callicoder.com/kotlin-spring-boot-mysql-jpa-hibernate-rest-api-tutorial/>
+Exemplo de resposta:
+
+{ 
+  token: “153584135@48748$4828%5486”  
+} 
+Get / Users
+Esse endpoint é responsável por retornar todos os usuários que têm no sistema
+
+Parâmetros:
+name: name do usuário para procurar ele no banco de dados.
+
+Resposta:
+200! Ok
+
+Exemplo de resposta:
+
+[ 
+  { 
+    Id: 1, 
+    name: “felipe da silva filho”, 
+    email: ”felipe48@gmail.com”, 
+  }, 
+  { 
+    Id: 2, 
+    name: “lucas da silva filho”, 
+    email: ”lucas779@gmail.com”, 
+  } 
+] 
+Get / User
+Esse endpoint é responsável por retornar os dados do usuário a partir do id.
+
+Parâmetros:
+id: id do usuário para procurar ele no banco de dados.
+
+Resposta:
+200! Ok
+
+Exemplo de resposta:
+
+{ 
+    Id: 1, 
+    name: “felipe da silva filho”, 
+    email: ”felipe48@gmail.com”,
+ 
+} 
+
+Get / Produtos
+Esse endpoint é responsável por retornar todos os Produtos que têm no sistema
+
+Parâmetros:
+id: do Produto para procurar ele no banco de dados.
+name: name do Produto para procurar ele no banco de dados.
+
+Resposta:
+200! Ok
+
+Post / Produto
+Esse endpoint é responsável por criar um Produto no sistema.
+
+ #Parâmetros:{
+    name: nome do Produto
+    id: indetificação do Produto
+    img: imagem do Produto
+    descrição: e a descrição do Produto
+
+} 
+Resposta:
+Created! 201
+
+Exemplo de resposta:
+
+{ 
+  response: “user successfully saved” 
+} 
+
+
+Put/ User
+Esse endpoint é responsável por atualizar os dados do usuário no sistema de banco de dados.
+
+Parâmetros:
+Id: identificado do usuário a ser atualizado. name: nome do usuário.
+
+Resposta:
+No content! 204
+
+
+Put/ Produto
+Esse endpoint é responsável por atualizar os dados do Produto no sistema de banco de dados.
+
+Parâmetros:{
+    Id: identificado do Produto a ser atualizado.
+    name: nome do Produto.
+    img: imagem do Produto
+    descrição: e a descrição do Produto
+}
+
+
+Resposta:
+No content! 204
+
+Delete / User
+Esse endpoint é responsável por deletar um user do sistema de banco de dados.
+
+Parâmetros:{
+    Id: para identificar o usuário que será removido.
+}
+
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{ 
+  response: “Sucessfully deleted user” 
+}  
+
+Delete / Produto
+Esse endpoint é responsável por deletar um user do sistema de banco de dados.
+
+Parâmetros:{
+    Id: para identificar o Produto que será removido.
+}
+
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{ 
+  response: “Sucessfully deleted user” 
+}  
+Get / Location/:id
+Esse endpoint é responsável retorna os dados da localização do Usuario com base no ID fornecido.
+
+Parâmetros:
+user_id: refere-se ao usuário que deseja usar essas informações de localização para si mesmo.
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{ 
+
+  Id: 1, 
+  city: “cidade do cabo”, 
+  state: Stade, 
+  country: “Brasil”, 
+  user_id: 1 
+} 
+Post/ Location
+Esse endpoint é responsável por enviar os dados da localização do Ususario para poder salvar no banco de dados.
+Parâmetros:
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{ 
+  response: “data update successsfully” 
+} 
+Put / Location/:id
+Esse endpoint por atualizar os da localização do Endereço de acordo com o ID informado.
+
+Parâmetros:
+Id: Id da localização do endereço será atualizada. city: cidade do Usuario. state: estado do Usuario. country: país do Usuario.
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{
+  "successful user update"
+}
+Delete / Location/:id
+Esse endpoint por deletar a localização  com o id fornecido. 
+Parâmetros:
+Id: para indicar a localização que o usuário deseja deletar.
+
+Resposta:
+Ok! 200
+
+Exemplo de resposta:
+
+{ 
+  response:  ”successsfully deleted location” 
+}  

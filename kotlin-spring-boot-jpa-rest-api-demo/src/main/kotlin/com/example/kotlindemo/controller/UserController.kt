@@ -1,44 +1,45 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.User
+import com.example.kotlindemo.model.Usuario
 import com.example.kotlindemo.repository.UserRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.DeleteMapping
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.*
+import java.util.*
 import javax.validation.Valid
-import kotlin.contracts.contract
 
+
+
+@RestController
+@RequestMapping("/api")
 class UserController(private  val userRepository: UserRepository) {
 
-    @GetMapping("/user")
-    fun getAllUser(): List<User> = userRepository.findAll()
+    @GetMapping("/usuario")
+    fun getAllUser(): List<Usuario> = userRepository.findAll()
 
-    @GetMapping("/user")
-    fun getUserById(@PathVariable(value = "id") userId: Long): ResponseEntity<User>{
+
+
+    @GetMapping("/usuario/{id}")
+    fun getUserById(@PathVariable(value = "id") userId: Long): ResponseEntity<Usuario>{
         return userRepository.findById(userId).map {
                 user -> ResponseEntity.ok(user)
         }.orElse(ResponseEntity.notFound().build())
     }
 
 
-    @PostMapping("/user")
-    fun createNewUser(@Valid @RequestBody user: User): User = userRepository.save(user)
+    @PostMapping("/usuario")
+    fun createNewUser(@Valid @RequestBody user: Usuario): Usuario = userRepository.save(user)
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/usuario/{id}")
     fun updateUserById(@PathVariable(value = "id") userId: Long,
-                       @Valid @RequestBody newUser: User): ResponseEntity<User>{
-        return  userRepository.findById(userId).map { existingUser -> val updateUser: User = existingUser.copy(email = newUser.email, password = newUser.password)
+                       @Valid @RequestBody newUser: Usuario): ResponseEntity<Usuario>{
+        return  userRepository.findById(userId).map { existingUser -> val updateUser: Usuario = existingUser.copy(email = newUser.email, password = newUser.password)
             ResponseEntity.ok().body(userRepository.save(updateUser))
         }.orElse(ResponseEntity.notFound().build())
     }
 
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/usuario/{id}")
 
     fun deleteUserById(@PathVariable(value = "id") userId: Long): ResponseEntity<Void>{
         return userRepository.findById(userId).map { user -> userRepository.delete(user)
