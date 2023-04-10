@@ -41,7 +41,7 @@ Essa funcionalidade inclui uma página exclusiva para cada produto, que irá exi
 ```
 4. Listagem do Produto.
 ```
-
+Essa funcionalidade vai inclui um carrinho de compras onde os clientes podem adicionar os produtos que desejam comprar
 
 ```
 5. Realizar vendas do Produto.
