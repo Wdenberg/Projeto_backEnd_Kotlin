@@ -129,7 +129,6 @@ Exemplo de resposta:
     Id: 1, 
     name: “felipe da silva filho”, 
     email: ”felipe48@gmail.com”,
- 
 } 
 ```
 
@@ -166,9 +165,7 @@ Exemplo de resposta:
 
 ```
 { 
-
   response: “user successfully saved” 
-
 } 
 ```
 
