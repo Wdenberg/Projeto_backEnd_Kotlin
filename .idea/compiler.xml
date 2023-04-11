@@ -10,6 +10,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="apib7burguer" target="17" />
+      <module name="apib7burguer.main" target="17" />
+      <module name="apib7burguer.test" target="17" />
       <module name="kotlin-demo" target="11" />
     </bytecodeTargetLevel>
   </component>
