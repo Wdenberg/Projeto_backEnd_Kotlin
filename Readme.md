@@ -28,11 +28,23 @@ seu nome completo, endereço de e-mail e senha.
 A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua 
 localização residente.
 ```
-3. Realizar login.
+3. Caso de Uso 3: Realizar login.
 ```
-A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
+Descrição: A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
 de suas credenciais, como Email de usuário e senha. A tela de login vai incluir campos para inserir essas
- informações, também como botões para enviar as informações de login. 
+informações, também como botões para enviar as informações de login.
+
+Fluxo Principal:
+
+1. O usuário navega para a página de login e insere seu nome de usuário ou endereço de e-mail e senha.
+2. O sistema verifica as informações do usuário para determinar se as credenciais são válidas.
+3. Se as credenciais forem válidas, o sistema autentica o usuário e concede acesso ao recurso ou funcionalidade solicitado.
+4. Se as credenciais não forem válidas, o sistema notifica o usuário de que o login falhou e solicita que ele tente novamente ou redefina sua senha.
+
+Fluxo Alternativo: 
+
+Esquecimento de senha: Se o usuário esquecer a senha, o sistema oferece a opção de redefini-la. Normalmente, 
+o usuário deve fornecer um endereço de e-mail válido.
 ```
 4. Detalhamento do produto.
 ```
