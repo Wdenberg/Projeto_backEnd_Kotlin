@@ -17,12 +17,25 @@ Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 
 # Requisitos funcionais
 
+Caso de uso 1: Realizar cadastro.
 
-1. Realizar cadastro.
-```
-A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo
+Descrição: A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo
 seu nome completo, endereço de e-mail e senha.
-```
+
+Fluxo Principal:
+
+1. Os usuários acessam aplicação e selecionam a funcionalidade "Quero me cadastar".
+2. A aplicação exibe a tela de cadastro.
+3. O usuário preenche os campos que contém: 1.Digite seu nome, 2.Digite seu e-mail e 3.Digite sua senha.
+4. A aplicação valida as informações e salva o novo usuário.
+
+Fluxo Alternativo:
+
+Se o usuário digitar o e-mail inválido a aplicação deve exibir uma mensagem de erro indicando qual campo contém 
+infomações incorretas. O usuário pode então corrigi-las e finalizar seu cadasto.
+
+
+
 2. Registrar endereço.
 ```
 A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua 
