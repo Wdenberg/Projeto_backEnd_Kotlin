@@ -28,7 +28,7 @@ seu nome completo, endereço de e-mail e senha.
 A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua 
 localização residente.
 ```
-3. Caso de Uso 3: Realizar login.
+Caso de Uso 3: Realizar login.
 
 Descrição: A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
 de suas credenciais, como Email de usuário e senha. A tela de login vai incluir campos para inserir essas
