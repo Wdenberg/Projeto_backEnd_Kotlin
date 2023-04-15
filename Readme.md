@@ -31,7 +31,7 @@ Fluxo Principal:
 
 Fluxo Alternativo:
 
-Se o usuário digitar o e-mail inválido a aplicação deve exibir uma mensagem de erro indicando qual campo contém 
+Se o usuário digitar o e-mail inválido, senhas não idênticas a aplicação deve exibir uma mensagem de erro indicando qual campo contém 
 infomações incorretas. O usuário pode então corrigi-las e finalizar seu cadasto.
 
 
@@ -56,25 +56,45 @@ Fluxo Principal:
 
 Fluxo Alternativo: 
 
-Esquecimento de senha: Se o usuário esquecer a senha, o sistema oferece a opção de redefini-la. Normalmente, 
-o usuário deve fornecer um endereço de e-mail válido.
+Se o usuário esquecer a senha o sistema oferece a opção de redefini-la. O usupario deve fornecer um endereço 
+de e-mail válido para receber uma link para redefinir sua senha. 
 
-4. Detalhamento do produto.
-```
-A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações detalhadas 
-sobre o produto antes de decidir a compra. Essa funcionalidade inclui uma página exclusiva para cada produto, 
-que irá exibir a imagem produto com suas descrições detalhadas e o preço do produto. Também com opção para 
-adicionar o produto a uma lista de desejos para compra posteriormente.
-```
-5. Listagem do Produto.
-```
-Essa funcionalidade vai exibir uma lista dos produtor que estão disponíveis para venda.
-```
+Caso de Uso 4: Listagem do Produto.
+
+Descrição: Essa funcionalidade deve exibir a lista dos produtos que estarão disponíveis para a venda.
+
+Fluxo Principal:
+
+1. A aplicação irá listar todos os produtos da loja.
+2. 
+3. Caso tenha promoção do dia a aplicação irá exibir essa promoção.
+
+Fluxo Alternativo:
+Terá também a funcionalidade de pesquisar pelo o nome do produto desejado.
+
+
+
+Caso de Uso 5: Detalhamento do produto.
+
+Decrição: A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações detalhadas
+sobre o produto antes de decidir se irá finalizar o pedido.
+
+Fluxo principal:
+
+1. Essa funcionalidade inclui uma página exclusiva para cada produto.
+2. A aplicação irá exibir a imagem produto com suas descrições detalhadas e o preço do produto.
+3. Terá a opção de adicionar mais de uma quantidade do protudo selecionado ou remove-lo.
+4. Aplicação também deve conter a opção para adicionar à sacola.
+
+Fluxo Alternativo:
+
+Se o usuário não desejar mais aquele produto selecionado, ele pode clicar na funcionalidade de voltar para a tela de
+produtos.
 6. Realizar vendas do Produto.
-```
+
 Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo com que o cliente 
 possa efetuar a compra do mesmo, onde exibirá o valor total de todos os produtos selecionados.
-```
+
 
 # UML do Mobile
 
