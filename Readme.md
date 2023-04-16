@@ -193,7 +193,11 @@ Exemplo de resposta:
 Esse endpoint é responsável por retornar os dados do usuário a partir do id.
 
 ### Parâmetros:
-id: id do usuário para procurar ele no banco de dados.
+```{
+  id: id do usuário para procurar ele no banco de dados.
+}
+```
+
 
 ### Resposta:
 200! Ok
@@ -211,9 +215,21 @@ Exemplo de resposta:
 ### Get / Produtos
 Esse endpoint é responsável por retornar todos os Produtos que têm no sistema
 
+```
+{ 
+    Id: 22, 
+    name: “X-Burguer”, 
+    img: "/x-burguer",
+} 
+```
+
 ### Parâmetros:
-id: do Produto para procurar ele no banco de dados.
-name: name do Produto para procurar ele no banco de dados.
+```{
+  id: do Produto para procurar ele no banco de dados.
+  name: name do Produto para procurar ele no banco de dados.
+}
+```
+
 
 ### Resposta:
 200! Ok
@@ -247,35 +263,34 @@ Exemplo de resposta:
 
 ### Put/ User
 Esse endpoint é responsável por atualizar os dados do usuário no sistema de banco de dados.
-
-### Parâmetros:
-Id: identificado do usuário a ser atualizado. name: nome do usuário.
-
-### Resposta:
-No content! 204
-
-
-### Put/ Produto
-Esse endpoint é responsável por atualizar os dados do Produto no sistema de banco de dados.
-
-Parâmetros:
-
-Exemplo de resposta:
-
 ```
 {
-  Id: identificado do Produto a ser atualizado.
-  name: nome do Produto.
-  img: imagem do Produto
-  descrição: e a descrição do Produto
+  name: "Gabriel Lima",
+  email: "gabriellima42@gmail.com
 }
 ```
 
+### Parâmetros:
+```{
+   Id: identificado do usuário a ser atualizado. name: nome do usuário.
+}
+```
+
+
 ### Resposta:
 No content! 204
 
+
 ### Delete / User
 Esse endpoint é responsável por deletar um user do sistema de banco de dados.
+```
+{
+  id: 1,
+  name: "Gabriel Lima",
+  email: "gabriellima42@gmail.com
+}
+```
+
 
 ### Parâmetros:
 
