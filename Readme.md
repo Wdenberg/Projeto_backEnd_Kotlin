@@ -34,13 +34,28 @@ Fluxo Alternativo:
 Se o usuário digitar o e-mail inválido, senhas não idênticas a aplicação deve exibir uma mensagem de erro indicando qual campo contém 
 infomações incorretas. O usuário pode então corrigi-las e finalizar seu cadasto.
 
+Caso de uso 2: Registrar endereço.
 
+Descrição: A funcionalidade de endereço é permitir que os usuários insiram e armazenem seus endereços pessoais para uso futuro na aplicação.
 
-2. Registrar endereço.
-```
-A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua 
-localização residente.
-```
+Fluxo Principal:
+
+1. O usuário navega para a página de endereço e seleciona a opção de adicionar um novo endereço.
+2. O usuário insere as informações do endereço, incluindo CEP, Rua, Número da residencia, Bairro, Cidade, Esstado e Complemento.
+3. O sistema valida as informações do endereço para garantir que todos os campos obrigatórios foram preenchidos corretamente.
+4. O sistema salva o endereço no banco de dados do usuário para uso futuro.
+
+Fluxo Alternativo:
+
+Edição de endereço: Se o usuário precisar editar um endereço existente, ele pode navegar para a página de endereço e selecionar o endereço que deseja editar.
+O usuário pode fazer as alterações necessárias e, em seguida, salvar as alterações.
+
+Exclusão de endereço: Se o usuário precisar excluir um endereço existente, ele pode navegar para a página de endereço e selecionar o endereço que deseja excluir.
+O usuário pode confirmar a exclusão e o sistema remove o endereço do banco de dados do usuário.
+
+Múltiplos endereços: Alguns sistemas permitem que os usuários armazenem vários endereços para uso futuro.
+Nesse caso, o usuário pode adicionar, editar ou excluir um ou mais endereços.
+
 Caso de Uso 3: Realizar login.
 
 Descrição: A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
