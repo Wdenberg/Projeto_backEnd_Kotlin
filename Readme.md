@@ -76,17 +76,21 @@ de e-mail válido para receber uma link para redefinir sua senha.
 
 Caso de Uso 4: Listagem do Produto.
 
-Descrição: Essa funcionalidade deve exibir a lista dos produtos que estarão disponíveis para a venda.
+Descrição: A funcionalidade de listagem de produtos, irá permitir que os usuários visualizem uma lista de produtos disponíveis para compra.
 
 Fluxo Principal:
 
-1. A aplicação irá listar todos os produtos da loja.
-2. 
-3. Caso tenha promoção do dia a aplicação irá exibir essa promoção.
+1. O usuário navega para a página de listagem de produtos.
+2. Sistema recupera os produtos do banco de dados e exibe uma lista de produtos disponíveis para compra, 
+geralmente com uma imagem, título, descrição e preço.
+3. O usuário pode selecionar um produto para visualizar mais informações ou adicionar o produto ao carrinho.
+4. Se o usuário adiciona o produto ao carrinho, o sistema atualiza o carrinho do usuário com o novo item.
 
 Fluxo Alternativo:
-Terá também a funcionalidade de pesquisar pelo o nome do produto desejado.
 
+O usuário pode clicar na funcionalidade de filtrar e restringir a lista de produto com base 
+em seu critério específico. O sistema pode exibir promoções e descontos para produtos específicos ou para toda a loja. 
+Os usuários podem ver essas promoções ao navegar pela lista de produtos ou na página de detalhes do produto.
 
 
 Caso de Uso 5: Detalhamento do produto.
@@ -105,6 +109,7 @@ Fluxo Alternativo:
 
 Se o usuário não desejar mais aquele produto selecionado, ele pode clicar na funcionalidade de voltar para a tela de
 produtos.
+
 6. Realizar vendas do Produto.
 
 Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo com que o cliente 
