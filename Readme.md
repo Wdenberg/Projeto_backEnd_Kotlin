@@ -127,11 +127,20 @@ Fluxo Alternativo:
 Se o usuário não estiver logado no sistema, ele pode precisar fazer login ou criar uma nova conta antes de realizar a compra.
 O sistema pode permitir que os usuários escolham entre diferentes métodos de pagamento, como cartão e dinheiro.
 
+<<<<<<< HEAD
+=======
+# UML do Mobile
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/88355939/232342470-55a5a39c-0085-437f-a4f0-69e0c8dda3b0.png" 
+width="700px"/>
+</div>
+>>>>>>> 39aed06a04011a1f77a18da4bf5200aa002ece73
 
 # UML do BackEnd
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/88355939/230667728-da6492c6-1418-4266-b39d-3ce3fc6142f1.jpeg" 
+<img src="https://user-images.githubusercontent.com/88355939/232342470-55a5a39c-0085-437f-a4f0-69e0c8dda3b0.png" 
 width="700px"/>
 </div>
 
