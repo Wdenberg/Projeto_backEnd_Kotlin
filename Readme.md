@@ -110,11 +110,22 @@ Fluxo Alternativo:
 Se o usuário não desejar mais aquele produto selecionado, ele pode clicar na funcionalidade de voltar para a tela de
 produtos.
 
-6. Realizar vendas do Produto.
+### 6. Realizar vendas do Produto.
 
-Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo com que o cliente 
+Descrição: Essa funcionalidade deve armazenar o produto selecionado diretamente para o carrinho compra fazendo com que o cliente 
 possa efetuar a compra do mesmo, onde exibirá o valor total de todos os produtos selecionados.
 
+Fluxo Principal:
+
+1. O usuário adiciona um ou mais produtos ao carrinho de compras
+2. O usuário navega para a página de checkout e insere as informações de envio, faturamento e pagamento.
+3. O usuário confirma o pedido e o sistema processa o pagamento.
+4. O sistema exibe uma página de confirmação do pedido com o número do pedido e um resumo dos itens comprados.
+
+Fluxo Alternativo:
+
+Se o usuário não estiver logado no sistema, ele pode precisar fazer login ou criar uma nova conta antes de realizar a compra.
+O sistema pode permitir que os usuários escolham entre diferentes métodos de pagamento, como cartão e dinheiro.
 
 # UML do Mobile
 
