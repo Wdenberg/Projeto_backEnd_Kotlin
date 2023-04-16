@@ -17,7 +17,7 @@ Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 
 # Requisitos funcionais
 
-Caso de uso 1: Realizar cadastro.
+### Caso de uso 1: Realizar cadastro.
 
 Descrição: A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo
 seu nome completo, endereço de e-mail e senha.
@@ -34,7 +34,7 @@ Fluxo Alternativo:
 Se o usuário digitar o e-mail inválido, senhas não idênticas a aplicação deve exibir uma mensagem de erro indicando qual campo contém 
 infomações incorretas. O usuário pode então corrigi-las e finalizar seu cadasto.
 
-Caso de uso 2: Registrar endereço.
+### Caso de uso 2: Registrar endereço.
 
 Descrição: A funcionalidade de endereço é permitir que os usuários insiram e armazenem seus endereços pessoais para uso futuro na aplicação.
 
@@ -56,7 +56,7 @@ O usuário pode confirmar a exclusão e o sistema remove o endereço do banco de
 Múltiplos endereços: Alguns sistemas permitem que os usuários armazenem vários endereços para uso futuro.
 Nesse caso, o usuário pode adicionar, editar ou excluir um ou mais endereços.
 
-Caso de Uso 3: Realizar login.
+### Caso de Uso 3: Realizar login.
 
 Descrição: A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
 de suas credenciais, como Email de usuário e senha. A tela de login vai incluir campos para inserir essas
@@ -74,7 +74,7 @@ Fluxo Alternativo:
 Se o usuário esquecer a senha o sistema oferece a opção de redefini-la. O usupario deve fornecer um endereço 
 de e-mail válido para receber uma link para redefinir sua senha. 
 
-Caso de Uso 4: Listagem do Produto.
+### Caso de Uso 4: Listagem do Produto.
 
 Descrição: A funcionalidade de listagem de produtos, irá permitir que os usuários visualizem uma lista de produtos disponíveis para compra.
 
@@ -93,7 +93,7 @@ em seu critério específico. O sistema pode exibir promoções e descontos para
 Os usuários podem ver essas promoções ao navegar pela lista de produtos ou na página de detalhes do produto.
 
 
-Caso de Uso 5: Detalhamento do produto.
+### Caso de Uso 5: Detalhamento do produto.
 
 Decrição: A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações detalhadas
 sobre o produto antes de decidir se irá finalizar o pedido.
