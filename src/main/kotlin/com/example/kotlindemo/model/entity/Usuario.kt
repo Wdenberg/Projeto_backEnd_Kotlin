@@ -18,6 +18,7 @@ data class Usuario (
     @get:NotBlank
     val nome: String? = null,
     @get: NotBlank
+
     val email: String? = null,
 
     @get: NotBlank

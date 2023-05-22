@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.util.*
 import javax.validation.Valid
+import javax.validation.constraints.Email
 import kotlin.math.log
 
 
@@ -56,11 +57,11 @@ class UserController(private  val userRepository: UserRepository) {
             userRepository.findByEmail(it)
         }?: run {
             login.email?.let {
-                this.getUsuarioById(login.email).body
+                this.getUsuarioById(login.password).body
             }
         }
         usuario?.let {  usuario ->
-            if (login.password == usuario.password){
+            if (login.email == usuario.email){
                 return BaseResponse.createResponse(
                     isError = false,
                     data = usuario,
