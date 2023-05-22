@@ -1,13 +1,15 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.Usuario
+import com.example.kotlindemo.model.entity.Usuario
+import com.example.kotlindemo.model.requeste.Login
+import com.example.kotlindemo.model.response.BaseResponse
 import com.example.kotlindemo.repository.UserRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.util.*
 import javax.validation.Valid
-
+import kotlin.math.log
 
 
 @RestController
@@ -20,8 +22,8 @@ class UserController(private  val userRepository: UserRepository) {
 
 
     @GetMapping("/usuario/{id}")
-    fun getUserById(@PathVariable(value = "id") userId: Long): ResponseEntity<Usuario>{
-        return userRepository.findById(userId).map {
+    fun getUsuarioById(@PathVariable(value = "id") id: Long): ResponseEntity<Usuario>{
+        return userRepository.findById(id).map {
                 user -> ResponseEntity.ok(user)
         }.orElse(ResponseEntity.notFound().build())
     }
@@ -32,7 +34,8 @@ class UserController(private  val userRepository: UserRepository) {
 
     @PutMapping("/usuario/{id}")
     fun updateUserById(@PathVariable(value = "id") userId: Long,
-                       @Valid @RequestBody newUser: Usuario): ResponseEntity<Usuario>{
+                       @Valid @RequestBody newUser: Usuario
+    ): ResponseEntity<Usuario>{
         return  userRepository.findById(userId).map { existingUser -> val updateUser: Usuario = existingUser.copy(email = newUser.email, password = newUser.password)
             ResponseEntity.ok().body(userRepository.save(updateUser))
         }.orElse(ResponseEntity.notFound().build())
@@ -41,9 +44,35 @@ class UserController(private  val userRepository: UserRepository) {
 
     @DeleteMapping("/usuario/{id}")
 
-    fun deleteUserById(@PathVariable(value = "id") userId: Long): ResponseEntity<Void>{
-        return userRepository.findById(userId).map { user -> userRepository.delete(user)
+    fun deleteUserById(@PathVariable(value = "id") id: Long): ResponseEntity<Void>{
+        return userRepository.findById(id).map { user -> userRepository.delete(user)
             ResponseEntity<Void>(HttpStatus.OK)
         }.orElse(ResponseEntity.notFound().build())
     }
+
+    @PostMapping("/login")
+    fun login(@Valid @RequestBody login: Login): ResponseEntity<BaseResponse<Usuario?>>{
+        val usuario = login.email?.let {
+            userRepository.findByEmail(it)
+        }?: run {
+            login.email?.let {
+                this.getUsuarioById(login.email).body
+            }
+        }
+        usuario?.let {  usuario ->
+            if (login.password == usuario.password){
+                return BaseResponse.createResponse(
+                    isError = false,
+                    data = usuario,
+                    code = HttpStatus.OK
+                )
+            }else{
+                return BaseResponse.createResponse()
+            }
+        }?: run {
+            return BaseResponse.createResponse()
+        }
+    }
+
+
 }

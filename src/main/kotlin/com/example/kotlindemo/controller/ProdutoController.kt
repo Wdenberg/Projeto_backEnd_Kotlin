@@ -1,6 +1,6 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.Produto
+import com.example.kotlindemo.model.entity.Produto
 import com.example.kotlindemo.repository.ProdutoRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -33,7 +33,8 @@ class ProdutoController (private val produtoRepository: ProdutoRepository) {
 
     @PutMapping("/produto/{id}")
     fun updateProdutoById(@PathVariable(value = "id")produtoId: Long,
-                          @Valid @RequestBody newProduto:Produto): ResponseEntity<Produto>{
+                          @Valid @RequestBody newProduto: Produto
+    ): ResponseEntity<Produto>{
         return produtoRepository.findById(produtoId).map {
             existingProduto -> val updateProduto: Produto = existingProduto.copy(nome = newProduto.nome,img = newProduto.img,descricao = newProduto.descricao, preco = newProduto.preco)
             ResponseEntity.ok().body(produtoRepository.save(updateProduto))

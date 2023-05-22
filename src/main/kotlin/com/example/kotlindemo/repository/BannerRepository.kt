@@ -1,7 +1,7 @@
 package com.example.kotlindemo.repository
 
 
-import com.example.kotlindemo.model.Banner
+import com.example.kotlindemo.model.entity.Banner
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

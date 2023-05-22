@@ -1,6 +1,6 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.Banner
+import com.example.kotlindemo.model.entity.Banner
 import com.example.kotlindemo.repository.BannerRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -33,7 +33,8 @@ class BannerController(private val bannerRepository: BannerRepository){
 
     @PutMapping("/banner/{id}")
     fun updateBannerById(@PathVariable(value = "id")bannerId: Long,
-                         @Valid @RequestBody newBanner: Banner) : ResponseEntity<Banner>{
+                         @Valid @RequestBody newBanner: Banner
+    ) : ResponseEntity<Banner>{
         return bannerRepository.findById(bannerId).map {
             existingBanner -> val updateBanner: Banner = existingBanner.copy(imagem = newBanner.imagem)
             ResponseEntity.ok().body(bannerRepository.save(updateBanner))

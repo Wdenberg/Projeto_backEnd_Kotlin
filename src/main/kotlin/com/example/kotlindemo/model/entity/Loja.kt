@@ -1,16 +1,18 @@
-package com.example.kotlindemo.model
+package com.example.kotlindemo.model.entity
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.validation.constraints.NotBlank
+import javax.persistence.OneToMany
+
 
 @Entity
-data class Banner (
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+data class Loja(
 
-    @get: NotBlank
-    val imagem: String = ""
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val idLoja: Long = 0,
+
+    @OneToMany(targetEntity = Produto::class)
+    val produto: List<Produto>
 )

@@ -1,4 +1,4 @@
-package com.example.kotlindemo.model
+package com.example.kotlindemo.model.entity
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
