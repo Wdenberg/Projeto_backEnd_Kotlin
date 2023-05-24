@@ -53,15 +53,10 @@ class UserController(private  val userRepository: UserRepository) {
 
     @PostMapping("/login")
     fun login(@Valid @RequestBody login: Login): ResponseEntity<BaseResponse<Usuario?>>{
-        val usuario = login.email?.let {
-            userRepository.findByEmail(it)
-        }?: run {
-            login.email?.let {
-                this.getUsuarioById(login.password).body
-            }
-        }
+        val usuario =
+            userRepository.findByEmail(email = login.email)
         usuario?.let {  usuario ->
-            if (login.email == usuario.email){
+            if (login.password == usuario.password){
                 return BaseResponse.createResponse(
                     isError = false,
                     data = usuario,
