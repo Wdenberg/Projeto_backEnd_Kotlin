@@ -20,32 +20,34 @@ class BannerController(private val bannerRepository: BannerRepository){
 
     @GetMapping("/banner")
     fun getAllBanner(): List<Banner> = bannerRepository.findAll()
+    /*
+        @GetMapping("banner/{id}")
+        fun getBannerById(@PathVariable(value = "id")bannerId:Long): ResponseEntity<Banner>{
+            return bannerRepository.findById(bannerId).map {
+                banner -> ResponseEntity.ok(banner)
+            }.orElse(ResponseEntity.notFound().build())
+        }
 
-    @GetMapping("banner/{id}")
-    fun getBannerById(@PathVariable(value = "id")bannerId:Long): ResponseEntity<Banner>{
-        return bannerRepository.findById(bannerId).map {
-            banner -> ResponseEntity.ok(banner)
-        }.orElse(ResponseEntity.notFound().build())
-    }
+        @PostMapping("/banner")
+        fun createNewBanner(@Valid @RequestBody banner: Banner): Banner = bannerRepository.save(banner)
 
-    @PostMapping("/banner")
-    fun createNewBanner(@Valid @RequestBody banner: Banner): Banner = bannerRepository.save(banner)
+        @PutMapping("/banner/{id}")
+        fun updateBannerById(@PathVariable(value = "id")bannerId: Long,
+                             @Valid @RequestBody newBanner: Banner
+        ) : ResponseEntity<Banner>{
+            return bannerRepository.findById(bannerId).map {
+                existingBanner -> val updateBanner: Banner = existingBanner.copy(imagem = newBanner.imagem)
+                ResponseEntity.ok().body(bannerRepository.save(updateBanner))
+            }.orElse(ResponseEntity.notFound().build())
+        }
 
-    @PutMapping("/banner/{id}")
-    fun updateBannerById(@PathVariable(value = "id")bannerId: Long,
-                         @Valid @RequestBody newBanner: Banner
-    ) : ResponseEntity<Banner>{
-        return bannerRepository.findById(bannerId).map {
-            existingBanner -> val updateBanner: Banner = existingBanner.copy(imagem = newBanner.imagem)
-            ResponseEntity.ok().body(bannerRepository.save(updateBanner))
-        }.orElse(ResponseEntity.notFound().build())
-    }
+        @DeleteMapping("/banner/{id}")
+        fun deleteBannerById(@PathVariable(value = "id") bannerId: Long): ResponseEntity<Void>{
+            return bannerRepository.findById(bannerId).map {
+                banner -> bannerRepository.delete(banner)
+                ResponseEntity<Void>(HttpStatus.OK)
+            }.orElse(ResponseEntity.notFound().build())
+        }
 
-    @DeleteMapping("/banner/{id}")
-    fun deleteBannerById(@PathVariable(value = "id") bannerId: Long): ResponseEntity<Void>{
-        return bannerRepository.findById(bannerId).map {
-            banner -> bannerRepository.delete(banner)
-            ResponseEntity<Void>(HttpStatus.OK)
-        }.orElse(ResponseEntity.notFound().build())
-    }
+     */
 }

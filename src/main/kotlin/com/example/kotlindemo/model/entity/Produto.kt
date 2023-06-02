@@ -17,8 +17,7 @@ data class Produto (
     @get:NotBlank
     val img: String = "",
 
-    @get:NotBlank
-    val preco: Double = 0.0,
+    val preco: Double? = 00.00,
 
     @get:NotBlank
     val descricao: String = "",

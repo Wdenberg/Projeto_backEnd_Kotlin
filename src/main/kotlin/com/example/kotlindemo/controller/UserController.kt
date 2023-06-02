@@ -17,17 +17,20 @@ import kotlin.math.log
 @RequestMapping("/api")
 class UserController(private  val userRepository: UserRepository) {
 
+
+    // localhost:8080/api/usuario
     @GetMapping("/usuario")
     fun getAllUser(): List<Usuario> = userRepository.findAll()
 
 
-
+    // localhost:8080/api/usuario/1
     @GetMapping("/usuario/{id}")
     fun getUsuarioById(@PathVariable(value = "id") id: Long): ResponseEntity<Usuario>{
         return userRepository.findById(id).map {
                 user -> ResponseEntity.ok(user)
         }.orElse(ResponseEntity.notFound().build())
     }
+
 
 
     @PostMapping("/usuario")
@@ -37,7 +40,7 @@ class UserController(private  val userRepository: UserRepository) {
     fun updateUserById(@PathVariable(value = "id") userId: Long,
                        @Valid @RequestBody newUser: Usuario
     ): ResponseEntity<Usuario>{
-        return  userRepository.findById(userId).map { existingUser -> val updateUser: Usuario = existingUser.copy(email = newUser.email, password = newUser.password)
+        return  userRepository.findById(userId).map { existingUser -> val updateUser: Usuario = existingUser.copy(nome = newUser.nome,email = newUser.email, password = newUser.password)
             ResponseEntity.ok().body(userRepository.save(updateUser))
         }.orElse(ResponseEntity.notFound().build())
     }
@@ -54,9 +57,9 @@ class UserController(private  val userRepository: UserRepository) {
     @PostMapping("/login")
     fun login(@Valid @RequestBody login: Login): ResponseEntity<BaseResponse<Usuario?>>{
         val usuario =
-            userRepository.findByEmail(email = login.email)
+            userRepository.findByEmail(email = login.email) // wdeasasdasddasd
         usuario?.let {  usuario ->
-            if (login.password == usuario.password){
+            if (login.password == usuario.password){ ///asasdad
                 return BaseResponse.createResponse(
                     isError = false,
                     data = usuario,
@@ -66,7 +69,9 @@ class UserController(private  val userRepository: UserRepository) {
                 return BaseResponse.createResponse()
             }
         }?: run {
-            return BaseResponse.createResponse()
+            return BaseResponse.createResponse(
+
+            )
         }
     }
 
