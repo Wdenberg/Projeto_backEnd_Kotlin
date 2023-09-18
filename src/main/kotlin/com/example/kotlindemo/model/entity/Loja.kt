@@ -13,6 +13,6 @@ data class Loja(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val idLoja: Long = 0,
 
-    @OneToMany(targetEntity = Produto::class)
-    val produto: List<Produto>
+    @OneToMany(targetEntity = Products::class)
+    val products: List<Products>
 )

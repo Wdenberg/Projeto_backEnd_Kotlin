@@ -1,7 +1,7 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.entity.Banner
-import com.example.kotlindemo.repository.BannerRepository
+import com.example.kotlindemo.model.entity.Banners
+import com.example.kotlindemo.repository.BannersRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -16,38 +16,38 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/api")
-class BannerController(private val bannerRepository: BannerRepository){
+class BannersController(private val bannersRepository: BannersRepository){
 
     @GetMapping("/banner")
-    fun getAllBanner(): List<Banner> = bannerRepository.findAll()
-    /*
+    fun getAllBanner(): List<Banners> = bannersRepository.findAll()
+
         @GetMapping("banner/{id}")
-        fun getBannerById(@PathVariable(value = "id")bannerId:Long): ResponseEntity<Banner>{
-            return bannerRepository.findById(bannerId).map {
+        fun getBannerById(@PathVariable(value = "id")bannerId:Long): ResponseEntity<Banners>{
+            return bannersRepository.findById(bannerId).map {
                 banner -> ResponseEntity.ok(banner)
             }.orElse(ResponseEntity.notFound().build())
         }
 
         @PostMapping("/banner")
-        fun createNewBanner(@Valid @RequestBody banner: Banner): Banner = bannerRepository.save(banner)
+        fun createNewBanner(@Valid @RequestBody banners: Banners): Banners = bannersRepository.save(banners)
 
         @PutMapping("/banner/{id}")
         fun updateBannerById(@PathVariable(value = "id")bannerId: Long,
-                             @Valid @RequestBody newBanner: Banner
-        ) : ResponseEntity<Banner>{
-            return bannerRepository.findById(bannerId).map {
-                existingBanner -> val updateBanner: Banner = existingBanner.copy(imagem = newBanner.imagem)
-                ResponseEntity.ok().body(bannerRepository.save(updateBanner))
+                             @Valid @RequestBody newBanners: Banners
+        ) : ResponseEntity<Banners>{
+            return bannersRepository.findById(bannerId).map {
+                existingBanner -> val updateBanners: Banners = existingBanner.copy(img = newBanners.img)
+                ResponseEntity.ok().body(bannersRepository.save(updateBanners))
             }.orElse(ResponseEntity.notFound().build())
         }
 
         @DeleteMapping("/banner/{id}")
         fun deleteBannerById(@PathVariable(value = "id") bannerId: Long): ResponseEntity<Void>{
-            return bannerRepository.findById(bannerId).map {
-                banner -> bannerRepository.delete(banner)
+            return bannersRepository.findById(bannerId).map {
+                banner -> bannersRepository.delete(banner)
                 ResponseEntity<Void>(HttpStatus.OK)
             }.orElse(ResponseEntity.notFound().build())
         }
 
-     */
+
 }

@@ -7,20 +7,20 @@ import javax.persistence.Id
 import javax.validation.constraints.NotBlank
 
 @Entity
-data class Produto (
+data class Products (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
     @get:NotBlank
-    val nome: String = "",
+    val name: String = "",
 
     @get:NotBlank
     val img: String = "",
 
-    val preco: Double? = 00.00,
+    val price: Double? = 00.00,
 
     @get:NotBlank
-    val descricao: String = "",
+    val description: String = "",
 
 
 )

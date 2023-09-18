@@ -18,6 +18,6 @@ data class Pedidos(
     @OneToOne(targetEntity = Loja::class)
     val loja : List<Loja>,
 
-    @OneToMany(targetEntity = Produto::class)
-    val produtos: List<Produto>
+    @OneToMany(targetEntity = Products::class)
+    val products: List<Products>
 )

@@ -1,7 +1,7 @@
 package com.example.kotlindemo.controller
 
-import com.example.kotlindemo.model.entity.Produto
-import com.example.kotlindemo.repository.ProdutoRepository
+import com.example.kotlindemo.model.entity.Products
+import com.example.kotlindemo.repository.ProductsRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -16,37 +16,37 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/api")
-class ProdutoController (private val produtoRepository: ProdutoRepository) {
+class ProductsController (private val productsRepository: ProductsRepository) {
 
     @GetMapping("/produto")
-    fun getAllProduto() : List<Produto> = produtoRepository.findAll()
+    fun getAllProduto() : List<Products> = productsRepository.findAll()
 
-    /*
+
         @GetMapping("/produto/{id}")
-        fun getProdutoById(@PathVariable(value = "id") produtoId: Long) : ResponseEntity<Produto>{
-            return produtoRepository.findById(produtoId).map {
+        fun getProdutoById(@PathVariable(value = "id") produtoId: Long) : ResponseEntity<Products>{
+            return productsRepository.findById(produtoId).map {
                 produto -> ResponseEntity.ok(produto)
             }.orElse(ResponseEntity.notFound().build())
         }
 
         @PostMapping("/produto")
-        fun createNewProduto(@Valid @RequestBody produto: Produto) : Produto = produtoRepository.save(produto)
+        fun createNewProduto(@Valid @RequestBody products: Products) : Products = productsRepository.save(products)
 
         @PutMapping("/produto/{id}")
         fun updateProdutoById(@PathVariable(value = "id")produtoId: Long,
-                              @Valid @RequestBody newProduto: Produto
-        ): ResponseEntity<Produto>{
-            return produtoRepository.findById(produtoId).map {
-                existingProduto -> val updateProduto: Produto = existingProduto.copy(nome = newProduto.nome,img = newProduto.img,descricao = newProduto.descricao, preco = newProduto.preco)
-                ResponseEntity.ok().body(produtoRepository.save(updateProduto))
+                              @Valid @RequestBody newProducts: Products
+        ): ResponseEntity<Products>{
+            return productsRepository.findById(produtoId).map {
+                existingProduto -> val updateProducts: Products = existingProduto.copy(name = newProducts.name,img = newProducts.img, description = newProducts.description, price = newProducts.price)
+                ResponseEntity.ok().body(productsRepository.save(updateProducts))
             }.orElse(ResponseEntity.notFound().build())
         }
         @DeleteMapping("/produto/{id}")
         fun deleteProdutoById(@PathVariable(value = "id")produtoId: Long) : ResponseEntity<Void>{
-            return produtoRepository.findById(produtoId).map {
-                produto -> produtoRepository.delete(produto)
+            return productsRepository.findById(produtoId).map {
+                produto -> productsRepository.delete(produto)
                 ResponseEntity<Void>(HttpStatus.OK)
             }.orElse(ResponseEntity.notFound().build())
         }
-    */
+
 }

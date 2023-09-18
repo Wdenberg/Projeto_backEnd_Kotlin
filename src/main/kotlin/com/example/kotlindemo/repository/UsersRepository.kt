@@ -1,12 +1,12 @@
 package com.example.kotlindemo.repository
 
-import com.example.kotlindemo.model.entity.Usuario
+import com.example.kotlindemo.model.entity.Users
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface UserRepository : JpaRepository<Usuario, Long>{
+interface UsersRepository : JpaRepository<Users, Long>{
 
-    fun findByEmail(email: String): Usuario?
+    fun findByEmail(email: String): Users?
 
 }

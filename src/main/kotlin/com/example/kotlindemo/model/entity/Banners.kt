@@ -7,10 +7,10 @@ import javax.persistence.Id
 import javax.validation.constraints.NotBlank
 
 @Entity
-data class Banner (
+data class Banners (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
     @get: NotBlank
-    val imagem: String = ""
+    val img: String = ""
 )

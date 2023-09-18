@@ -10,13 +10,13 @@ import javax.validation.constraints.NotBlank
 
 @Lazy
 @Entity
-data class Usuario (
+data class Users (
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long = 0,
 
     @get:NotBlank
-    val nome: String? = null,
+    val name: String? = null,
     @get: NotBlank
     val email: String? = null,
 
