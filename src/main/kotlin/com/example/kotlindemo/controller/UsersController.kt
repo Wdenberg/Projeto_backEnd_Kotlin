@@ -1,7 +1,7 @@
 package com.example.kotlindemo.controller
 
 import com.example.kotlindemo.model.entity.Users
-import com.example.kotlindemo.model.requeste.Login
+import com.example.kotlindemo.model.response.requeste.Login
 import com.example.kotlindemo.model.response.BaseResponse
 import com.example.kotlindemo.repository.UsersRepository
 import org.springframework.http.HttpStatus
