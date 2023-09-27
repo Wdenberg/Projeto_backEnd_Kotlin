@@ -17,10 +17,10 @@ import javax.validation.constraints.NotBlank
     val slug: String = "",
 
     @get:NotBlank
-    val status: String? = "",
+    val status: String = "",
 
     @get:NotBlank
-    val name: String? = "",
+    val name: String = "",
 
     @Column(name = "main_color")
     val mainColor: String = "",
