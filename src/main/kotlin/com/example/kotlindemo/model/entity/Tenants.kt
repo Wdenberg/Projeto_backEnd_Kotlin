@@ -26,6 +26,9 @@ import javax.validation.constraints.NotBlank
     @Column(name = "password")
     val password: String = "",
 
-   @OneToMany(mappedBy = "tenant")
-   val districts: List<Districts> = ArrayList(),
+    @OneToMany(mappedBy = "tenant")
+    val districts: List<Districts> = ArrayList(),
+
+    @OneToMany(mappedBy = "tenant")
+    val orders: List<Orders> = ArrayList(),
 )
