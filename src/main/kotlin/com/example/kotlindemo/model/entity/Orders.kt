@@ -34,4 +34,7 @@ class Orders (
 
     @OneToMany(mappedBy = "order")
     val orderProducts: List<Order_products> = ArrayList(),
+
+    @OneToMany(mappedBy = "order")
+    val orderStatuses: List<Order_statuses> = ArrayList(),
 )
