@@ -12,6 +12,12 @@ data class Users (
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long = 0,
 
+    @OneToMany(mappedBy = "user")
+    val addresses: List<UserAddresses> = ArrayList(),
+
+    @OneToMany(mappedBy = "user")
+    val orders: List<Orders> = ArrayList(),
+
     @get:NotBlank
     val name: String? = null,
 
@@ -20,12 +26,6 @@ data class Users (
 
     @get: NotBlank
     val password: String? = null,
-
-    @OneToMany(mappedBy = "user")
-    val addresses: List<UserAddresses> = ArrayList(),
-
-    @OneToMany(mappedBy = "user")
-    val orders: List<Orders> = ArrayList(),
 )
 
 

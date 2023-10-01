@@ -11,7 +11,6 @@ import javax.validation.constraints.NotBlank
 @Entity
 class Districts (
 @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     val id: Long = 0,
 
     @ManyToOne

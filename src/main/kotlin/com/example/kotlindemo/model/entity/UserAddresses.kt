@@ -16,14 +16,17 @@ class UserAddresses(
     val id: Long = 0,
 
     @ManyToOne
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "id_users")
     val user: Users? = null,
+
+    @get:NotBlank
+    @Column(name = "id_district")
+    val id_district: Long? = null,
 
     @get:NotBlank
     val street: String = "",
 
     @get:NotBlank
-    @Column(name = "street_number")
     val street_number: String = "",
 
     @get:NotBlank

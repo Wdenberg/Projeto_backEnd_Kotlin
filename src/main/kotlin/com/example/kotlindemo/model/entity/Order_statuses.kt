@@ -9,13 +9,13 @@ class Order_statuses (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
+    @ManyToOne
+    @JoinColumn(name = "id_order")
+    val order: Orders? = null,
+
     @get:NotBlank
     val status: String = "",
 
     @get:NotBlank
     val created_at: String = "",
-
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    val order: Orders? = null,
 )
