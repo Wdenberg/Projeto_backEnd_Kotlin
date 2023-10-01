@@ -1,9 +1,6 @@
 package com.example.kotlindemo.model.entity
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 import javax.validation.constraints.NotBlank
 
 @Entity
@@ -16,5 +13,10 @@ class Order_products (
 
     @get:NotBlank
     val quantity: Int = 0,
+
+    //muitos pra um entre Order_products e Products
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    val product: Products? = null
 
     )

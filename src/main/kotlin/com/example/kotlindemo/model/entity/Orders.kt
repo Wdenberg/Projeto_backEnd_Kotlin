@@ -1,11 +1,7 @@
 package com.example.kotlindemo.model.entity
 
 import java.util.Date
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.OneToMany
+import javax.persistence.*
 import javax.validation.constraints.NotBlank
 
 @Entity
@@ -30,5 +26,9 @@ class Orders (
     val order_date: String = "",
 
     @get:NotBlank
-    val status: String = ""
+    val status: String = "",
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    val user: Users? = null,
 )
