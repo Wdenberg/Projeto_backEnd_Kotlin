@@ -16,7 +16,10 @@ class Order_products (
 
     //muitos pra um entre Order_products e Products
     @ManyToOne
-    @JoinColumn(name = "product_id")
-    val product: Products? = null
+    @JoinColumn(name = "id_product")
+    val product: Products? = null,
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    val category: Categories? = null,
     )

@@ -15,8 +15,8 @@ class Districts (
     val id: Long = 0,
 
     @ManyToOne
-    @JoinColumn(name = "tenant_id")
-    //val tenant: Tenants? = null,
+    @JoinColumn(name = "id_tenant")
+    val tenant: Tenants? = null,
 
     @get:NotBlank
     val name: String = "",
