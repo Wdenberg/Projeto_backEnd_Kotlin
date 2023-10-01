@@ -34,4 +34,7 @@ import javax.validation.constraints.NotBlank
 
     @OneToMany(mappedBy = "tenant")
     val products: List<Products> = ArrayList(),
+
+    @OneToMany(mappedBy = "tenant")
+    val banners: List<Banners> = ArrayList(),
 )
