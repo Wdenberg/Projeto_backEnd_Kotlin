@@ -1,10 +1,6 @@
 package com.example.kotlindemo.model.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 import javax.validation.constraints.NotBlank
 
 @Entity
@@ -28,5 +24,8 @@ import javax.validation.constraints.NotBlank
     val email: String = "",
 
     @Column(name = "password")
-    val password: String = ""
+    val password: String = "",
+
+   @OneToMany(mappedBy = "tenant")
+   val districts: List<Districts> = ArrayList(),
 )
