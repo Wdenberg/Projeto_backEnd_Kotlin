@@ -31,9 +31,8 @@ class UserAddresses(
     @get:NotBlank
     val zipcode: String = "",
 
-    @ManyToOne
-    @JoinColumn(name = "district_id")
-    val districts: Districts? = null,
+    @get:NotBlank
+    val district: String? = null,
 
     @get:NotBlank
     val city: String = "",
