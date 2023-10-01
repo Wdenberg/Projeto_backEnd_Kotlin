@@ -31,4 +31,7 @@ class Orders (
     @ManyToOne
     @JoinColumn(name = "user_id")
     val user: Users? = null,
+
+    @OneToMany(mappedBy = "order")
+    val orderProducts: List<Order_products> = ArrayList(),
 )

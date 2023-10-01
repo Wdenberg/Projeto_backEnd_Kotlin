@@ -15,11 +15,9 @@ class UserAddresses(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    //relacionamento muitos pra um entre UserAddresses e Users
-    // Cada endereço de usuário é associado a um usuário.
     @ManyToOne
     @JoinColumn(name = "users_id")
-    val  user: Users? = null,
+    val user: Users? = null,
 
     @get:NotBlank
     val street: String = "",
@@ -30,9 +28,6 @@ class UserAddresses(
 
     @get:NotBlank
     val zipcode: String = "",
-
-    @get:NotBlank
-    val district: String? = null,
 
     @get:NotBlank
     val city: String = "",
