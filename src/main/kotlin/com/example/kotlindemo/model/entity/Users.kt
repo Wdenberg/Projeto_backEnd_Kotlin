@@ -21,11 +21,11 @@ data class Users (
     @get: NotBlank
     val password: String? = null,
 
-    //@OneToMany com mappedBy pra indicar que o relacionamento é do tipo um pra muitos,
-    //e que a propriedade addresses na classe Users mapeia o relacionamento.
     @OneToMany(mappedBy = "user")
-    val addresses: List<UserAddresses> = ArrayList()
+    val addresses: List<UserAddresses> = ArrayList(),
 
+    @OneToMany(mappedBy = "user")
+    val orders: List<Orders> = ArrayList(),
 )
 
 
