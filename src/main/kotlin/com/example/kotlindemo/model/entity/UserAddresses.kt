@@ -1,5 +1,6 @@
 package com.example.kotlindemo.model.entity
 
+import org.springframework.context.annotation.Lazy
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -10,8 +11,9 @@ import javax.persistence.ManyToOne
 import javax.validation.constraints.NotBlank
 
 @Entity
+@Lazy
 
-class UserAddresses(
+data class UserAddresses(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
