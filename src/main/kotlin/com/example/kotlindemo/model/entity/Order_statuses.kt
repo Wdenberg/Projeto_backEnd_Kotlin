@@ -9,10 +9,6 @@ data class Order_statuses (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @ManyToOne
-    @JoinColumn(name = "id_order")
-    val order: Orders? = null,
-
     @get:NotBlank
     val status: String = "",
 

@@ -8,14 +8,6 @@ data class Products (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @ManyToOne
-    @JoinColumn(name = "id_tenant")
-    val tenant: Tenants? = null,
-
-    @ManyToOne
-    @JoinColumn(name = "id_category")
-    val category: Categories? = null,
-
     @get:NotBlank
     val name: String = "",
 

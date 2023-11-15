@@ -13,10 +13,6 @@ class Districts (
 @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @ManyToOne
-    @JoinColumn(name = "id_tenant")
-    val tenant: Tenants? = null,
-
     @get:NotBlank
     val name: String = "",
 

@@ -37,7 +37,7 @@ class UserAddressesController(private val userAddressesRepository: UserAddresses
     ):ResponseEntity<UserAddresses>{
         return userAddressesRepository.findById(userAddressesId).map { existingUserAddresses -> val updateUserAddresses:
                 UserAddresses = existingUserAddresses.copy(street = newUserAddresses.street, street_number = newUserAddresses.street_number
-                , zipcode = newUserAddresses.zipcode, id_district = newUserAddresses.id_district, city = newUserAddresses.city, state = newUserAddresses.state, complement = newUserAddresses.complement)
+                , zipcode = newUserAddresses.zipcode,city = newUserAddresses.city, state = newUserAddresses.state, complement = newUserAddresses.complement)
                 ResponseEntity.ok().body(userAddressesRepository.save(updateUserAddresses))
         }.orElse(ResponseEntity.notFound().build())
 

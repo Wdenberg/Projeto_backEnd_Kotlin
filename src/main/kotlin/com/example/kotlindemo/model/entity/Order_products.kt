@@ -8,13 +8,6 @@ class Order_products (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @ManyToOne
-    @JoinColumn(name = "id_order")
-    val order: Orders? = null,
-
-    @Column(name = "id_product")
-    val id_product: Long? = null,
-
     @get:NotBlank
     val product_price: Float,
 

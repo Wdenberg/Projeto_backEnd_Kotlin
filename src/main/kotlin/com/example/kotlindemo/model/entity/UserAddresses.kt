@@ -17,14 +17,6 @@ data class UserAddresses(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @ManyToOne
-    @JoinColumn(name = "id_users")
-    val user: Users? = null,
-
-    @get:NotBlank
-    @Column(name = "id_district")
-    val id_district: Long? = null,
-
     @get:NotBlank
     val street: String = "",
 

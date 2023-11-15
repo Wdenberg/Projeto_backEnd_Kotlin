@@ -9,18 +9,6 @@ import javax.validation.constraints.NotBlank
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @OneToMany(mappedBy = "id_tenant")
-    val districts: List<Districts> = ArrayList(),
-
-    @OneToMany(mappedBy = "id_tenant")
-    val orders: List<Orders> = ArrayList(),
-
-    @OneToMany(mappedBy = "id_tenant")
-    val products: List<Products> = ArrayList(),
-
-    @OneToMany(mappedBy = "id_tenant")
-    val banners: List<Banners> = ArrayList(),
-
     @get:NotBlank
     val slug: String = "",
 
